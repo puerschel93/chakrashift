@@ -3,7 +3,7 @@ import { CursorType } from 'enums/cursor';
 import { DropdownProps } from './interface';
 
 export const Dropdown = (props: DropdownProps) => {
-	return <Base cursor={props.cursor} placeholder={props.placeholder} fullWidth={props.fullWidth} />;
+	return <Base cursor={props.cursor} placeholder={props.placeholder} fullWidth={props.fullWidth} showCaret={false} />;
 };
 
 Dropdown.defaultProps = {
