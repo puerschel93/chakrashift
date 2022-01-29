@@ -7,4 +7,6 @@ export interface BaseProps {
 	cursor: CursorType;
 	placeholder: string;
 	label: string | null;
+	isRequired: boolean;
+	showCaret: boolean;
 }

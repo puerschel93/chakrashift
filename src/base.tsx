@@ -1,4 +1,4 @@
-import { FormLabel, HStack, Input, VStack } from '@chakra-ui/react';
+import { FormControl, FormLabel, HStack, Input, VStack } from '@chakra-ui/react';
 import { BaseProps } from './base-interface';
 
 /**
@@ -8,14 +8,26 @@ import { BaseProps } from './base-interface';
  */
 export const Base = (props: BaseProps) => {
 	return (
-		<VStack width={props.width} maxWidth={props.fullWidth ? 'auto' : props.maxWidth} align="flex-start">
-			{props.label && (
-				<HStack>
-					<FormLabel>{props.label}</FormLabel>
-				</HStack>
-			)}
-			<Input cursor={props.cursor} placeholder={props.placeholder} />
-		</VStack>
+		<FormControl
+			isRequired={props.isRequired}
+			width={props.width}
+			maxWidth={props.fullWidth ? 'auto' : props.maxWidth}
+		>
+			<VStack align="flex-start" spacing={0}>
+				{props.label && (
+					<HStack>
+						<FormLabel fontSize="sm">{props.label}</FormLabel>
+					</HStack>
+				)}
+				<Input
+					cursor={props.cursor}
+					placeholder={props.placeholder}
+					sx={{
+						caretColor: props.showCaret ? 'auto' : 'transparent',
+					}}
+				/>
+			</VStack>
+		</FormControl>
 	);
 };
 
@@ -24,4 +36,6 @@ export const _defaultProps = (Base.defaultProps = {
 	maxWidth: '25rem',
 	placeholder: '',
 	label: null,
+	isRequired: false,
+	showCaret: true,
 });
