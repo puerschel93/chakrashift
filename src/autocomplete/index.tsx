@@ -1,4 +1,4 @@
-import { FormControl, FormLabel, Input } from '@chakra-ui/react';
+import { Box, FormControl, FormLabel, Input } from '@chakra-ui/react';
 import IF from 'helpers/if';
 import { InputProps } from 'interfaces/input';
 import { v4 as uuidv4 } from 'uuid';
@@ -22,7 +22,9 @@ export const Autocomplete = (props: AutocompleteProps) => {
 			<IF condition={props.label !== null}>
 				<FormLabel htmlFor={props.id}>{props.label}</FormLabel>
 			</IF>
-			<Input placeholder={props.placeholder} />
+			<Box>
+				<Input placeholder={props.placeholder} name={props.id} />
+			</Box>
 		</FormControl>
 	);
 };
