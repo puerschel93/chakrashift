@@ -1,4 +1,5 @@
-import { FormControl, FormLabel, HStack, Input, VStack } from '@chakra-ui/react';
+import { FormControl, FormLabel, HStack, Input, InputGroup, InputRightElement, VStack } from '@chakra-ui/react';
+import { IoChevronDown } from 'react-icons/io5';
 import { BaseProps } from './base-interface';
 
 /**
@@ -19,13 +20,16 @@ export const Base = (props: BaseProps) => {
 						<FormLabel fontSize="sm">{props.label}</FormLabel>
 					</HStack>
 				)}
-				<Input
-					cursor={props.cursor}
-					placeholder={props.placeholder}
-					sx={{
-						caretColor: props.showCaret ? 'auto' : 'transparent',
-					}}
-				/>
+				<InputGroup>
+					<Input
+						cursor={props.cursor}
+						placeholder={props.placeholder}
+						sx={{
+							caretColor: props.showCaret ? 'auto' : 'transparent',
+						}}
+					/>
+					{props.shouldShowRightElement && <InputRightElement children={<IoChevronDown />} />}
+				</InputGroup>
 			</VStack>
 		</FormControl>
 	);
@@ -37,5 +41,4 @@ export const _defaultProps = (Base.defaultProps = {
 	placeholder: '',
 	label: null,
 	isRequired: false,
-	showCaret: true,
 });
