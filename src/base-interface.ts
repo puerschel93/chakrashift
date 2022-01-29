@@ -9,4 +9,5 @@ export interface BaseProps {
 	label: string | null;
 	isRequired: boolean;
 	showCaret: boolean;
+	shouldShowRightElement: boolean;
 }

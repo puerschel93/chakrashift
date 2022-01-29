@@ -11,4 +11,6 @@ Autocomplete.defaultProps = {
 	cursor: CursorType.Text,
 	placeholder: 'Enter your placeholder',
 	fullWidth: false,
+	shouldShowRightElement: false,
+	showCaret: false,
 };
