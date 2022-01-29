@@ -6,4 +6,5 @@ export interface BaseProps {
 	fullWidth: boolean;
 	cursor: CursorType;
 	placeholder: string;
+	label: string | null;
 }

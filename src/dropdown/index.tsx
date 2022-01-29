@@ -1,4 +1,4 @@
-import { Base } from 'base';
+import { Base, _defaultProps } from 'base';
 import { CursorType } from 'enums/cursor';
 import { DropdownProps } from './interface';
 
@@ -7,6 +7,7 @@ export const Dropdown = (props: DropdownProps) => {
 };
 
 Dropdown.defaultProps = {
+	..._defaultProps,
 	cursor: CursorType.Pointer,
 	placeholder: 'Enter your placeholder',
 	fullWidth: false,

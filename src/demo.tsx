@@ -5,7 +5,7 @@ import { Dropdown } from 'dropdown';
 const Demo = () => {
 	return (
 		<VStack w="100vw" h="100vh" justify="center" spacing={12}>
-			<Autocomplete fullWidth />
+			<Autocomplete fullWidth label="Gold" />
 			<Dropdown />
 		</VStack>
 	);
