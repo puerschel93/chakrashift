@@ -1,4 +1,4 @@
-# Chakrashift
+# chakrashift
 Chakra-UI ⚡ + Downshift 🏎️
 
 ---
